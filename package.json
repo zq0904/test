@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/zq0904/test#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
@@ -28,14 +30,18 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "eslint --fix"
-    ]
+    "*.{js,vue}": ["eslint"]
   }
 }
