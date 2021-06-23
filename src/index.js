@@ -1,4 +1,5 @@
 const obj = {
   a: 1
 }
-// test
+
+module.exports = obj

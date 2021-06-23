@@ -1,4 +1,0 @@
-[submodule "src/submodule-test"]
-	path = src/submodule-test
-	url = git@github.com:zq0904/submodule-test.git
-	branch = master

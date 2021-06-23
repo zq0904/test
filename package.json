@@ -1,47 +1,18 @@
 {
-  "name": "test",
-  "version": "1.0.0",
+  "name": "zero-test",
+  "version": "7.4.4",
+  "main": "src/index.js",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "lint": "eslint src --ext .js,.vue"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zq0904/test.git"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zq0904/test/issues"
-  },
-  "homepage": "https://github.com/zq0904/test#readme",
+  "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.2.1",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,vue}": ["eslint"]
+    "jquery": "^3.6.0"
   }
 }
