@@ -1,15 +1,19 @@
 {
   "name": "zero-test",
-  "version": "7.4.4",
+  "version": "7.4.5",
   "main": "src/index.js",
-  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zq0904/test.git"
+  },
+  "description": "",
+  "keywords": ["test"],
   "author": "",
   "dependencies": {},
   "devDependencies": {
