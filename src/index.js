@@ -1,5 +1,5 @@
 const obj = {
-  a: 2
+  a: 3
 }
 
 module.exports = obj
