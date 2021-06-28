@@ -1,6 +1,12 @@
+# on:
+#   release:
+#     types: [created]
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
+    tags:
+      - v*
 jobs:
   text-publish:
     runs-on: ubuntu-latest
