@@ -15,3 +15,7 @@
 ### test codecov + action + jest
 
 - Travis CI 不再为开源项目提供免费服务 完全弃用转用 action
+
+- Codecov
+  - 徽章 在 Settings-> Badge
+  - action 执行测试错误是不会推送报告的
