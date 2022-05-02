@@ -1,6 +1,8 @@
 {
   "name": "zero-test",
   "version": "7.4.9",
+  "license": "MIT",
+  "author": "qixiaoqi <154809748@qq.com>",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,10 +15,9 @@
     "url": "git+https://github.com/zq0904/test.git"
   },
   "description": "",
-  "keywords": ["test"],
-  "author": "",
+  "keywords": [
+    "test-action"
+  ],
   "dependencies": {},
-  "devDependencies": {
-    "jquery": "^3.6.0"
-  }
+  "devDependencies": {}
 }
