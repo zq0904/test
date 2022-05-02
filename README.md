@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/zq0904/test/branch/master/graph/badge.svg?token=jGb6vgIdnc)](https://codecov.io/gh/zq0904/test)
+
 ### test github action 发布 npm 包
 
 - github action
