@@ -5,7 +5,8 @@
   "author": "qixiaoqi <154809748@qq.com>",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -19,5 +20,7 @@
     "test-action"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
 }
