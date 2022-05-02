@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "declaration": true,
+    "declarationMap": true, // yarn link <package_name> 定位源码比较方便
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // "incremental": true, // 只编译修改过的文件 这个时候会生成tsconfig.tsbuildinfo 下次编译的时候会进行对比只编译修改过的文件
+    "skipLibCheck": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+
+  "rootDir": "./src",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "umd", "cjs", "esm", "typings"]
+}
