@@ -8,3 +8,5 @@ export function add(x: number, y: number) {
 export function subtraction(x: number, y: number) {
   return x - y
 }
+
+console.log('运行了')

@@ -3,10 +3,15 @@
   "version": "7.4.9",
   "license": "MIT",
   "author": "qixiaoqi <154809748@qq.com>",
-  "main": "src/index.js",
+  "description": "",
+  "keywords": [
+    "test",
+    "action"
+  ],
+  "main": "src/index.ts",
   "scripts": {
-    "test": "jest --coverage",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "dev": "ts-node src/index.ts",
+    "test": "jest --coverage"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -15,15 +20,12 @@
     "type": "git",
     "url": "git+https://github.com/zq0904/test.git"
   },
-  "description": "",
-  "keywords": [
-    "test-action"
-  ],
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.31",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   }
 }
