@@ -1,3 +1,5 @@
+import fn from '@zeroer/company-test'
+
 /**
  * 相加函数
  */
@@ -9,4 +11,4 @@ export function subtraction(x: number, y: number) {
   return x - y
 }
 
-console.log('运行了')
+console.log('运行了', fn())

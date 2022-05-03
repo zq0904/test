@@ -1,31 +1,24 @@
 {
-  "name": "zero-test",
-  "version": "7.4.9",
-  "license": "MIT",
-  "author": "qixiaoqi <154809748@qq.com>",
+  "name": "test",
+  "version": "1.0.0",
   "description": "",
-  "keywords": [
-    "test",
-    "action"
-  ],
-  "main": "src/index.ts",
+  "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "test": "jest --coverage"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "dev:pnpm-test": "pnpm dev --filter pnpm-test",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zq0904/test.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zq0904/test/issues"
+  },
+  "homepage": "https://github.com/zq0904/test#readme",
   "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "@types/node": "^17.0.31",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.4",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "@changesets/cli": "^2.22.0"
   }
 }
