@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:pnpm-test": "pnpm dev --filter pnpm-test",
+    "changeset:version": "pnpm changeset && pnpm changeset version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
