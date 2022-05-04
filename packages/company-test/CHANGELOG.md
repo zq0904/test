@@ -1,5 +1,11 @@
 # @zeroer/company-test
 
+## 0.0.5
+
+### Patch Changes
+
+- ac9f96a: 890
+
 ## 0.0.4
 
 ### Patch Changes
