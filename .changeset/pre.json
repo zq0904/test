@@ -1,5 +1,5 @@
 {
-  "mode": "pre",
+  "mode": "exit",
   "tag": "beta",
   "initialVersions": {
     "@zeroer/company-test": "0.0.1",
@@ -8,6 +8,8 @@
   "changesets": [
     "chilled-gifts-listen",
     "light-waves-push",
-    "rich-pumpkins-smash"
+    "mighty-pants-doubt",
+    "rich-pumpkins-smash",
+    "tough-flowers-leave"
   ]
 }

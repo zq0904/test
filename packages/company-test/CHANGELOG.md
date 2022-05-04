@@ -1,5 +1,11 @@
 # @zeroer/company-test
 
+## 0.0.2-beta.1
+
+### Patch Changes
+
+- 1
+
 ## 0.0.2-beta.0
 
 ### Patch Changes
