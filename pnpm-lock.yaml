@@ -9,7 +9,10 @@ importers:
       '@changesets/cli': registry.npmmirror.com/@changesets/cli/2.22.0
 
   packages/company-test:
-    specifiers: {}
+    specifiers:
+      jquery: ^3.6.0
+    dependencies:
+      jquery: registry.npmmirror.com/jquery/3.6.0
 
   packages/pnpm-test:
     specifiers:
@@ -1482,7 +1485,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001335
-      electron-to-chromium: registry.npmmirror.com/electron-to-chromium/1.4.131
+      electron-to-chromium: registry.npmmirror.com/electron-to-chromium/1.4.132
       escalade: registry.npmmirror.com/escalade/3.1.1
       node-releases: registry.npmmirror.com/node-releases/2.0.4
       picocolors: registry.npmmirror.com/picocolors/1.0.0
@@ -1903,10 +1906,10 @@ packages:
       webidl-conversions: registry.npmmirror.com/webidl-conversions/5.0.0
     dev: true
 
-  registry.npmmirror.com/electron-to-chromium/1.4.131:
-    resolution: {integrity: sha512-oi3YPmaP87hiHn0c4ePB67tXaF+ldGhxvZnT19tW9zX6/Ej+pLN0Afja5rQ6S+TND7I9EuwQTT8JYn1k7R7rrw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.131.tgz}
+  registry.npmmirror.com/electron-to-chromium/1.4.132:
+    resolution: {integrity: sha512-JYdZUw/1068NWN+SwXQ7w6Ue0bWYGihvSUNNQwurvcDV/SM7vSiGZ3NuFvFgoEiCs4kB8xs3cX2an3wB7d4TBw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.132.tgz}
     name: electron-to-chromium
-    version: 1.4.131
+    version: 1.4.132
     dev: true
 
   registry.npmmirror.com/emittery/0.8.1:
@@ -3104,6 +3107,12 @@ packages:
       - ts-node
       - utf-8-validate
     dev: true
+
+  registry.npmmirror.com/jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jquery/-/jquery-3.6.0.tgz}
+    name: jquery
+    version: 3.6.0
+    dev: false
 
   registry.npmmirror.com/js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-tokens/-/js-tokens-4.0.0.tgz}
