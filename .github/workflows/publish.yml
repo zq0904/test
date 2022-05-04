@@ -1,35 +1,46 @@
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
+    branches:
+      - master
+    tags: # Sequence of patterns matched against refs/tags
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Clone
+      - name: 检出 项目
         uses: actions/checkout@v2
-      - name: Setup Node
+      - name: 设置 node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
           registry-url: 'https://registry.npmjs.org'
-      # - name: Install # For now, send the source code directly
-      #   run: yarn install
-      # - name: Build
-      #   run: npm run build
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.11
+      - name: 安装项目依赖
+        run: pnpm i
+      - name: 设置 .npmrc（publish 用户）
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
+      - name: changesets version + pull/merge request + changeset publish # 1. 在远程执行 changesets version 消费变更集 2. 然后创建一个 pull request 3. 当你 merge request 时候会去执行 npx changeset publish 发版
+        uses: changesets/action@v1
+        with:
+          publish: npx changeset publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Publish # 直接发包
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }} # Title
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
