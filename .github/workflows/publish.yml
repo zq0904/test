@@ -7,20 +7,20 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出 项目
+      - name: Checkout repo
         uses: actions/checkout@v2
-      - name: 设置 node
+      - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
           registry-url: 'https://registry.npmjs.org'
-      - name: 安装 pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.32.11
-      - name: 安装项目依赖
+      - name: Install project dependencs
         run: pnpm i
-      - name: 设置 .npmrc（publish 用户）
+      - name: Setup .npmrc # publish 用户
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
       - name: changesets version + pull/merge request + changeset publish # 1. 在远程执行 changesets version 消费变更集 2. 然后创建一个 pull request 3. 当你 merge request 时候会去执行 npx changeset publish 发版
         uses: changesets/action@v1
