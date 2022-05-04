@@ -1,5 +1,19 @@
 # @zeroer/pnpm-test
 
+## 0.1.0
+
+### Minor Changes
+
+- 012cff3: 2
+
+### Patch Changes
+
+- 012cff3: 3
+- Updated dependencies [012cff3]
+- Updated dependencies [e14f554]
+- Updated dependencies [b7e0d05]
+  - @zeroer/company-test@0.0.2
+
 ## 0.1.0-beta.2
 
 ### Patch Changes

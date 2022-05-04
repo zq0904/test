@@ -1,5 +1,13 @@
 # @zeroer/company-test
 
+## 0.0.2
+
+### Patch Changes
+
+- 012cff3: fix:xxx
+- e14f554: 设置了提交
+- b7e0d05: 1
+
 ## 0.0.2-beta.1
 
 ### Patch Changes
