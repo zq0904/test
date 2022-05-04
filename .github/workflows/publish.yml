@@ -1,7 +1,9 @@
 on:
   push:
-    tags: # Sequence of patterns matched against refs/tags
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+    branches:
+      - master
+    # tags: # Sequence of patterns matched against refs/tags
+    #   - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   release:
@@ -22,7 +24,7 @@ jobs:
         run: pnpm i
       - name: Setup .npmrc # publish 用户
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
-      - name: changesets version + pull/merge request + changeset publish # 1. 在远程执行 changesets version 消费变更集 2. 然后创建一个 pull request 3. 当你 merge request 时候会去执行 npx changeset publish 发版
+      - name: Create Release Pull Request # 1. 在远程执行 changesets version 消费变更集 2. 然后创建一个 pull request 3. 当你 merge request 时候会去执行 npx changeset publish 发版
         uses: changesets/action@v1
         with:
           publish: npx changeset publish
