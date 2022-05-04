@@ -10,7 +10,7 @@
 
 - 打 tag v8.0.0 推送到 github 走 action
 
-### codecov + action + jest [![codecov](https://codecov.io/gh/zq0904/test/branch/master/graph/badge.svg?token=jGb6vgIdnc)](https://codecov.io/gh/zq0904/test)
+### codecov + action + jest [![codecov](https://codecov.io/gh/zq0904/test/branch/master/graph/badge.svg?token=jGb6vgIdnc)](https://codecov.io/gh/zq0904/test) [在 monorepo 中使用 Codecov](https://www.curtiscode.dev/post/tools/codecov-monorepo/)
 
 - Travis CI 不再为开源项目提供免费服务 完全弃用转用 action
 
