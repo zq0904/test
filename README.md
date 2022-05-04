@@ -1,5 +1,3 @@
-[![codecov](https://codecov.io/gh/zq0904/test/branch/master/graph/badge.svg?token=jGb6vgIdnc)](https://codecov.io/gh/zq0904/test)
-
 ### github action 发布 npm 包
 
 - github action
@@ -12,12 +10,10 @@
 
 - 打 tag v8.0.0 推送到 github 走 action
 
-### codecov + action + jest
+### codecov + action + jest [![codecov](https://codecov.io/gh/zq0904/test/branch/master/graph/badge.svg?token=jGb6vgIdnc)](https://codecov.io/gh/zq0904/test)
 
 - Travis CI 不再为开源项目提供免费服务 完全弃用转用 action
 
 - Codecov
   - 徽章 在 Settings-> Badge
   - action 执行测试错误是不会推送报告的
-
-### pnpm

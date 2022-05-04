@@ -9,6 +9,7 @@
     "changeset": "pnpm changeset",
     "publish:latest": "pnpm changeset version && pnpm changeset publish",
     "publish:beta": "pnpm changeset pre enter beta && pnpm changeset && pnpm changeset version && pnpm changeset pre exit && pnpm changeset publish --tag beta",
+    "test:pnpm-test": "pnpm test --filter pnpm-test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

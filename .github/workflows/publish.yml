@@ -1,10 +1,7 @@
 on:
   push:
-    # branches:
-    #   - master
-    tags: # Sequence of patterns matched against refs/tags
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-
+    branches:
+      - master
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -30,18 +27,26 @@ jobs:
           publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Publish # 简单的直接发包
-      #   run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # - name: Create Release # 通过 GitHub 右侧Release API创建发布操作
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: Release ${{ github.ref }}
-      #     draft: false
-      #     prerelease: false
+# # 单仓库 直接发包
+# on:
+#   push:
+#     tags: # Sequence of patterns matched against refs/tags
+#       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+# jobs:
+#   release:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Publish
+#         run: npm publish
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+#       - name: Create Release # 通过 GitHub 右侧Release API创建发布操作
+#         id: create_release
+#         uses: actions/create-release@v1
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         with:
+#           tag_name: ${{ github.ref }}
+#           release_name: Release ${{ github.ref }}
+#           draft: false
+#           prerelease: false

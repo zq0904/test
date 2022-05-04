@@ -1,19 +1,26 @@
-# on: [push]
+on: [push]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Clone
+      - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install
-        run: yarn install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.11
+      - name: Install project dependencs
+        run: pnpm i
       - name: Test
-        run: npm run test
+        run: pnpm test:pnpm-test
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v3
+        with:
+          files: ./packages/pnpm-test/coverage/coverage-final.json
+          flags: pnpm0test
