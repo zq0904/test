@@ -1,5 +1,11 @@
 # @zeroer/company-test
 
+## 0.0.6
+
+### Patch Changes
+
+- 56c8f8e: 更新
+
 ## 0.0.5
 
 ### Patch Changes
