@@ -1,4 +1,4 @@
-import { add, subtraction } from '../src'
+import { add } from '../src'
 
 // test suite
 describe('test index.ts', () => {
@@ -6,12 +6,6 @@ describe('test index.ts', () => {
   it(`test ${add.name}`, () => {
     const res = add(1, 2)
     expect(res).toEqual(3)
-  })
-
-  // test case
-  test(`test ${subtraction.name}`, () => {
-    const res = subtraction(2, 1)
-    expect(res).toBe(1)
   })
 
   test('test jest.fn', () => {
