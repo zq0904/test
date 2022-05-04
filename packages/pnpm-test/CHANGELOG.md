@@ -1,5 +1,12 @@
 # @zeroer/pnpm-test
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies [57da39e]
+  - @zeroer/company-test@0.0.3
+
 ## 0.1.1-beta.0
 
 ### Patch Changes

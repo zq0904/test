@@ -1,5 +1,11 @@
 # @zeroer/company-test
 
+## 0.0.3
+
+### Patch Changes
+
+- 57da39e: fix: xxx
+
 ## 0.0.3-beta.0
 
 ### Patch Changes

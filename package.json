@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev:pnpm-test": "pnpm dev --filter pnpm-test",
-    "publish:latest": "pnpm changeset && pnpm changeset version && pnpm changeset publish",
+    "changeset": "pnpm changeset",
+    "publish:latest": "pnpm changeset version && pnpm changeset publish",
     "publish:beta": "pnpm changeset pre enter beta && pnpm changeset && pnpm changeset version && pnpm changeset pre exit && pnpm changeset publish --tag beta",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
