@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ESNext",
+    "target": "ES2015",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "declaration": true,
     "declarationMap": true, // yarn link <package_name> 定位源码比较方便
@@ -34,5 +34,5 @@
 
   "rootDir": "./src",
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "umd", "cjs", "esm", "typings"]
+  "exclude": ["node_modules", "**/*spec.ts", "dist", "umd", "cjs", "esm", "typings"]
 }
