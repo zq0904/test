@@ -1,2 +1,4 @@
 packages:
   - 'packages/**'
+  # 不包括
+  - '!packages/**/node_modules/**'
