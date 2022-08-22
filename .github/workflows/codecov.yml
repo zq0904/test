@@ -9,16 +9,14 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'
           registry-url: 'https://registry.npmjs.org'
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.32.11
       - name: Install project dependencs
         run: pnpm i
-      - name: Test
-        run: pnpm test:pnpm-test
+      - name: Test:vitest:coverage
+        run: pnpm -F @zeroer/pnpm-test test:vitest:coverage
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v3
         with:

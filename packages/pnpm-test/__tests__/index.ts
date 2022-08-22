@@ -1,3 +1,4 @@
+import { describe, it, test, expect, vi } from 'vitest'
 import { add } from '../src'
 
 // test suite
@@ -11,8 +12,8 @@ describe('test index.ts', () => {
   test('test jest.fn', () => {
     // jest.fn 模拟一个 add 函数
     // 设置函数的返回值
-    const mockFn = jest
-      .fn<number, number[]>(() => 9)
+    const mockFn = vi
+      .fn<number[], number>(() => 9)
       .mockImplementation(() => {
         // 改变函数的内部实现
         return 9
