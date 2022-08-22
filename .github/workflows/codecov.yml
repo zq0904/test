@@ -13,6 +13,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 7.5.2
       - name: Install project dependencs
         run: pnpm i
       - name: Test:vitest:coverage
